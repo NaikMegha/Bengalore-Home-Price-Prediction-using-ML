@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>
+            Home Price Prediction
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="app.css">
+        <script src="app.js"></script>
+
+    </head>
+    <body>
+     <div class="img"></div>
+     <form class="form">
+         <h2>Area (Square Feet)</h2>
+         <input class="area" type="text" id="uiSqft" name="total_sqft" value="1000">
+
+         <h2>BHK</h2>
+         <div class="switch-field">
+            <input type="radio" id="bhk1" name="bhk" value="1">
+            <label for="bhk1">1</label>
+            <input type="radio" id="bhk2" name="bhk" value="2" checked>
+            <label for="bhk2">2</label>
+            <input type="radio" id="bhk3" name="bhk" value="3">
+            <label for="bhk3">3</label>
+            <input type="radio" id="bhk4" name="bhk" value="4">
+            <label for="bhk4">4</label>
+            <input type="radio" id="bhk5" name="bhk" value="5">
+            <label for="bhk5">5</label>
+         </div>
+         
+       
+         <h2>Bath</h2>
+         <div class="switch-field">
+            <input type="radio" id="bath1" name="bath" value="1">
+            <label for="bath1">1</label>
+            <input type="radio" id="bath2" name="bath" value="2" checked>
+            <label for="bath2">2</label>
+            <input type="radio" id="bath3" name="bath" value="3">
+            <label for="bath3">3</label>
+            <input type="radio" id="bath4" name="bath" value="4">
+            <label for="bath4">4</label>
+            <input type="radio" id="bath5" name="bath" value="5">
+            <label for="bath5">5</label>
+         </div>
+         
+
+         <h2>Location</h2>
+         <select class="location" id="uiLocations" name="location">
+             <option value="" disabled="disabled" selected="selected">
+                 Choose a Location
+             </option>
+        </select>
+
+        <button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+         <div id="uiEstimatedPrice" class="result"><h2></h2></div>
+     </form>
+    </body>
+</html>
